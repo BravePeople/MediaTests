@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <!-- Videojs stuff -->
+        <!-- <link href="http://vjs.zencdn.net/5.4.4/video-js.css" rel="stylesheet">-->
+        <!-- Videojs ie8 support -->
+        <!-- <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>-->
+
+        <!-- picturefill stuff-->
+        <script>
+            document.createElement( "picture" );
+        </script>
+        <script async="true" src="assets/js/picturefill.min.js"></script>
+
+    </head>
+    <body>
+        <video id="header-video" autoplay class="video-js" width="1000" height="562" data-setup='{
+            "controls": false,
+            "loop": "true",
+            "autoplay": true,
+            "preload": "true"
+        }'>
+            <source src="assets/media/video.webm" type="video/webm">
+            <source src="assets/media/video.mp4" type="video/mp4">
+
+            <!-- Fallback -->
+            <picture>
+              <!--[if IE 9]><video style="display: none;"><![endif]-->
+              <source srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=min&h=900&w=2000&usm=10&chromasub=444&fm=pjpg&q=80" media="(min-width: 2000px)">
+                  <source srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=min&h=900&w=1500&usm=10&chromasub=444&fm=pjpg&q=80" media="(min-width: 1500px)">
+              <source srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=min&h=900&w=1000&usm=10&chromasub=444&fm=pjpg&q=80" media="(min-width: 1000px)">
+              <source srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=min&h=900&w=600&usm=10&chromasub=444&fm=pjpg&q=80&crop=right" media="(min-width: 600px)">
+                  <source srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=crop&h=300&w=380&usm=10&chromasub=444&fm=pjpg&q=80&crop=right" media="(max-width: 600px)">
+              <!--[if IE 9]></video><![endif]-->
+              <img srcset="https://assets.imgix.net/unsplash/citystreet.jpg?fit=min&h=900&w=580&usm=10&chromasub=444&fm=pjpg&q=80">
+            </picture>
+
+        </video>
+
+        <!-- Videojs stuff-->
+        <!--<script src="http://vjs.zencdn.net/5.4.4/video.js"></script>-->
+    </body>
+</html>
